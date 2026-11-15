@@ -1,5 +1,7 @@
 # PeachMe - PROJECT_STATE
 
+The design itself is in `Docs/Plan.md`.
+
 Mobile-only (iOS/Android) Unity 6 URP runner. A parody president flees a giant
 peach through all 50 states in admission order (Delaware -> Hawaii), with a
 Washington DC finale. Folder: ~/peachme
