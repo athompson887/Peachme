@@ -1,0 +1,42 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.apk
+*.aab
+*.unitypackage
+crashlytics-buildid.txt
+sysinfo.txt
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+
+# Tools output
+*.exe
+__pycache__/
+*.pyc
+
+# Generated audio cache (ElevenLabs raw downloads; keep the imported clips)
+/tools/audio_cache/
+
+# macOS
+.DS_Store
