@@ -23,3 +23,12 @@ new work on the same surface).
 - [ ] **V-014 Specials.** Do: pick Teddy, Bill and Dick in turn and press E. Expect: Teddy "Charge!" and smashes obstacles for 2.5 s ("SMASH!"); Bill's peach visibly slows for 2 s; Dick's gap bar jumps up. Cooldown counts down in the HUD.
 - [ ] **V-015 Voice log.** Do: play for a minute. Expect: `[Voice] commentator/run_start (no clip yet)` style lines in the Console, not spamming (at most one every ~2.5 s apart from priority lines); no errors.
 - [ ] **V-016 Phone.** Do: build to a phone (portrait). Expect: swipes move/jump/slide, single tap starts/retries, double-tap fires the special; HUD sits inside the notch/safe area and is readable.
+
+## Models (Tripo)
+
+- [ ] **V-017 Grey box still there with no art.** Do: with `Assets/Resources/Art` empty, Play. Expect: everything as in V-003..V-014; no `[Art]` warnings in the Console.
+- [ ] **V-018 First model swaps in.** Do: put `hero_abe.fbx` in `Assets/Resources/Art/Heroes/`, pick Abe, Play. Expect: Abe's model replaces the capsule, feet on the ground, 2.2 m tall (as tall as the old capsule), facing away from the camera. Other heroes are still capsules.
+- [ ] **V-019 Model fits its box.** Do: add `item_briefcase.fbx` and `item_taxforms.fbx`, Play. Expect: each sits on the ground in its lane, no bigger than its grey-box shape was; you hit the briefcase exactly when the model touches you, not before or after.
+- [ ] **V-020 Hero moves still read.** Do: with a hero model in, jump, slide and stumble. Expect: jumps clear tax forms; the slide squashes the model low enough to pass under red tape; the stumble lurches forward from the feet; the model blinks after a catch.
+- [ ] **V-021 Peach model.** Do: add `peach_angry.fbx` (and `peach_smug`, `peach_squashed` if made). Expect: the face stays towards the hero and the peach waddles (rocks) as it moves rather than rolling; turns smug under ~6 m; swaps to squashed for ~0.45 s on a catch.
+- [ ] **V-022 Backwards model.** Do: if any model faces the camera instead of away, set `yaw: 180f` in its spec in `ArtLibrary.cs`. Expect: it turns round and still sits in its lane.

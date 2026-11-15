@@ -12,7 +12,7 @@ Same working pattern as FlightSim2026, trimmed to fit.
 | Assembly | Folder | Contains | Unity? |
 |---|---|---|---|
 | SimCore | `Assets/SimCore` | The run: speed, lanes, peach, track, scoring, events | **No** |
-| Game | `Assets/Game` | Driver, input, grey-box view, camera, HUD, voice | Yes |
+| Game | `Assets/Game` | Driver, input, view (models or grey box), camera, HUD, voice | Yes |
 | GameEditor | `Assets/Editor` | Scene builder, UI panel asset | Editor only |
 | Tests | `Assets/Tests` | The suite (runs headless) | No |
 
@@ -80,6 +80,16 @@ The scene is built, not hand-edited: change `SceneBuilder.cs` and rebuild it.
 player sees or does adds a line there in the same commit: a tick box, **Do**
 (exactly what to press) and **Expect** (what right looks like). A green suite is
 not "done"; a ticked line is.
+
+## Art
+
+Tripo models go in `Assets/Resources/Art/<Folder>/<name>.fbx` (names and prompts
+in `Docs/ArtPrompts.md`). `ArtLibrary` loads one if it exists and fits it
+uniformly into its spec's box; if not, `RunView` draws the grey-box shape from
+the same spec. **The sizes live in `ArtSpecs` (ArtLibrary.cs) and nowhere else**:
+they are the sim's hit areas, so a model can't look smaller than what you hit.
+A model that faces backwards gets `yaw: 180f` in its spec, never a rotation
+written onto the model.
 
 ## Voices
 

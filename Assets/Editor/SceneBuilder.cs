@@ -46,7 +46,7 @@ namespace PeachMe.EditorTools
             var run = new GameObject("Run");
             run.AddComponent<RunInput>();
             run.AddComponent<RunDriver>();
-            run.AddComponent<GreyBoxView>();
+            run.AddComponent<RunView>();
             run.AddComponent<RunHud>();
             run.AddComponent<AudioSource>();
             run.AddComponent<Commentary>();

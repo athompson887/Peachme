@@ -13,7 +13,7 @@ Washington DC finale. Folder: ~/peachme
   - `StageTable.cs` - 51 stages with biome tags; chapters of 6.
   - `SimEvents.cs` - event stream for audio (ElevenLabs), VFX, UI.
 - `Assets/Game/` (Unity): `RunDriver` (fixed-step accumulator, flow: Title/Running/Banner/GameOver/Won),
-  `RunInput` (swipes, keys, pad), `GreyBoxView` (primitives), `ChaseCamera`, `RunHud` (UI Toolkit),
+  `RunInput` (swipes, keys, pad), `RunView` + `ArtLibrary` (Tripo models when present, grey-box primitives otherwise), `ChaseCamera`, `RunHud` (UI Toolkit),
   `Commentary` (event -> ElevenLabs clip, with cooldowns).
 - `Assets/Editor/`: `SceneBuilder` (PeachMe > Build Run Scene), `ToolkitAssets` (HUD PanelSettings).
 - `Assets/Tests/`: 24 NUnit tests, run headless by `Tools/SimCoreTests`.

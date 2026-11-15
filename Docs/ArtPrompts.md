@@ -3,11 +3,13 @@
 Every 3D asset in PeachMe, with the prompt to paste into Tripo (text to model),
 the size it must come out at, and the file name it goes in under.
 
-The sizes are not choices made here. They are the grey-box shapes in
-`Assets/Game/GreyBoxView.cs`, which match the sim's hit widths in `SimConfig`
-and `HeroDef`. A model that looks bigger than its hitbox feels unfair: the player
-"misses" a briefcase and still hits it. If a model has to be a different size,
-change the sim first, in Python, then here.
+The sizes are not choices made here. They are the specs in
+`Assets/Game/ArtLibrary.cs` (`ArtSpecs`), which match the sim's hit widths in
+`SimConfig` and `HeroDef`; that file wins if this one disagrees. The game scales
+every model uniformly into its box, so exact export scale doesn't matter, but
+the PROPORTIONS do: a briefcase made twice as deep as its box gets shrunk until
+the depth fits, and ends up looking small. If a model has to be a different
+size, change the sim first, in Python, then the spec.
 
 ## House rules
 
@@ -37,8 +39,8 @@ needs the glTFast package. Both are stored in Git LFS (`.gitattributes`).
 | Rule | Value |
 |---|---|
 | Units | 1 unit = 1 metre |
-| Facing | Character looks down **+Z** (the direction of running) |
-| Pivot | Heroes, obstacles, props: **feet / base centre**. Peach and pickups: **centre** |
+| Facing | Character looks down **+Z** (the direction of running). If one comes out backwards, set `yaw: 180f` in its spec |
+| Pivot | Doesn't matter: the game re-centres every model on its own bounds |
 | Up | +Y |
 | Root rotation | Never overwrite the importer's root rotation; compose with it (FlightSim2026 rule) |
 
@@ -55,15 +57,16 @@ needs the glTFast package. Both are stored in Git LFS (`.gitattributes`).
 Use Tripo's low-poly / face-limit option at these numbers rather than
 decimating afterwards.
 
-**Files:** `Assets/Art/<Folder>/<name>.fbx`, all lower case with underscores, as listed below.
+**Files:** `Assets/Resources/Art/<Folder>/<name>.fbx`, all lower case with underscores, as listed below. Drop one in and press Play: it replaces its grey-box shape straight away, and anything still missing stays grey.
 
 ---
 
-## 1. The Peach (`Assets/Art/Peach/`)
+## 1. The Peach (`Assets/Resources/Art/Peach/`)
 
-Size: a sphere **2.8 m across** (radius 1.4). Pivot at the centre. It rolls
-around X in code, so the body must be close to round, with the face on the
-**+Z side, facing the hero** (it chases from behind, so the camera sees the face).
+Size: a ball **2.8 m across** (radius 1.4). The face goes on the **+Z side,
+towards the hero** (it chases from behind, so the camera sees the face). A
+model with a face waddles and rocks in code rather than rolling, so the face
+stays forward; keep it close to round so the rock looks like movement.
 
 | File | Prompt (after the preamble) |
 |---|---|
@@ -74,7 +77,7 @@ around X in code, so the body must be close to round, with the face on the
 Angry is the normal chase. Smug is for when it's gaining (gap below 6 m).
 Squashed is the "caught you" frame.
 
-## 2. Heroes (`Assets/Art/Heroes/`)
+## 2. Heroes (`Assets/Resources/Art/Heroes/`)
 
 Pivot at the feet, facing +Z, standing in a **neutral A-pose** so it can be
 rigged (use Tripo's auto-rig if you want running animation from it). Width is
@@ -93,7 +96,7 @@ The widths follow `HeroDef.HalfWidth × 2`: Donny and Teddy are wide (0.45),
 Abe is narrow (0.35), the rest are 0.4. Abe is tall because the grey-box
 draws him at 2.2 m.
 
-## 3. Obstacles (`Assets/Art/Items/`)
+## 3. Obstacles (`Assets/Resources/Art/Items/`)
 
 Pivot at the base centre, facing +Z (the hero runs into the −Z face, so that's
 the face that should read). These sizes are the hitboxes, so stay inside them.
@@ -101,13 +104,13 @@ the face that should read). These sizes are the hitboxes, so stay inside them.
 | File | Size (W × H × D) | What the player does | Prompt (after the preamble) |
 |---|---|---|---|
 | `item_taxforms.fbx` | 1.5 × 0.6 × 0.6 m | Jump | `Low wide messy pile of white paper tax forms and folders, a few sheets sliding off, paperclips, one rubber stamp on top, chunky and readable, no writing` |
-| `item_redtape.fbx` | 1.7 wide, bar 0.35 tall, bottom of bar at 1.2 m | Slide under | `Thick sagging band of bright red tape strung between two short wooden posts, like a barrier ribbon, wide and low enough to duck under, bold and readable` |
+| `item_redtape.fbx` | 2.1 × 1.55 × 0.35 m overall; bar is the top 0.35 m (underside at 1.2 m) | Slide under | `Thick sagging band of bright red tape strung between two short wooden posts, like a barrier ribbon, wide and low enough to duck under, bold and readable` |
 | `item_briefcase.fbx` | 1.5 × 1.9 × 0.8 m | Change lane | `Giant upright brown leather lobbyist briefcase, gold clasps, bulging with banknotes poking out of the seams, standing on its end like a wall, no text or symbols on the money` |
 
 For the red tape, the posts must be outside the 1.7 m width or thin enough not
 to look solid. The player slides under the bar, not between the posts.
 
-## 4. Pickups (`Assets/Art/Items/`)
+## 4. Pickups (`Assets/Resources/Art/Items/`)
 
 Pivot at the centre. They spin or bob in code, so keep them symmetrical.
 
@@ -116,7 +119,7 @@ Pivot at the centre. They spin or bob in code, so keep them symmetrical.
 | `item_star.fbx` | 0.45 m across, 0.1 m thick | `Chunky five-pointed gold star coin, bevelled edges, glossy and bright, slightly puffy cartoon shape` |
 | `item_hotdog.fbx` | ~1.0 m long, 0.35 m thick | `Oversized cartoon hot dog in a soft bun with a wavy line of yellow mustard, cheerful and appetising, lying horizontally` |
 
-## 5. Hazards (`Assets/Art/Items/`)
+## 5. Hazards (`Assets/Resources/Art/Items/`)
 
 These cost points and let the peach catch up, so they should look tempting but
 a bit shady. Pivot at the base centre.
@@ -126,7 +129,7 @@ a bit shady. Pivot at the base centre.
 | `item_fakenews.fbx` | 0.9 long × 0.4 thick | `Rolled-up grey newspaper scroll tied with a string, smudgy grey ink blotches instead of words, slightly crumpled, lying horizontally, no readable text` |
 | `item_flipflop.fbx` | 0.7 × 0.12 × 1.3 m | `Giant bright pink beach flip-flop sandal lying flat, chunky foam sole, glossy strap, seen from above` |
 
-## 6. Track furniture (`Assets/Art/Track/`)
+## 6. Track furniture (`Assets/Resources/Art/Track/`)
 
 | File | Size | Prompt (after the preamble) |
 |---|---|---|
@@ -135,8 +138,9 @@ a bit shady. Pivot at the base centre.
 The banner is left blank on purpose: the state's name is drawn on it in code,
 so one model serves all 51 states.
 
-## 7. Scenery by biome (`Assets/Art/Scenery/`)
+## 7. Scenery by biome (`Assets/Resources/Art/Scenery/`)
 
+**Not placed by the game yet** - make these once the track art is in.
 Placed off the edges of the track (beyond x = ±4 m), so they never touch play.
 Two or three per biome is enough to tell the states apart at running speed.
 Pivot at the base centre. Make them 3 to 8 m tall.
@@ -153,9 +157,9 @@ Pivot at the base centre. Make them 3 to 8 m tall.
 | Tropical | `scen_tropical_palm.fbx`: `Curvy palm tree with coconuts` · `scen_tropical_hut.fbx`: `Small thatched beach hut on stilts` |
 | City | `scen_city_block.fbx`: `Chunky cartoon brick apartment building, four storeys, rooftop water tower` · `scen_city_hydrant.fbx`: `Oversized red fire hydrant` |
 
-## 8. The finale (`Assets/Art/Finale/`)
+## 8. The finale (`Assets/Resources/Art/Finale/`)
 
-Washington DC, stage 51. One landmark at the end of the last track is enough.
+**Not placed by the game yet.** Washington DC, stage 51. One landmark at the end of the last track is enough.
 
 | File | Size | Prompt (after the preamble) |
 |---|---|---|
