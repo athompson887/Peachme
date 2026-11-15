@@ -47,5 +47,5 @@ Heroes at regular: all 1.5-4.0 game overs (Bill strongest, Donny weakest - his t
 
 ## Next
 1. Open in Unity, Build Run Scene, play through Docs/Verification.md (M0 grey-box).
-2. Tripo batch 1: peach (angry/squashed/smug), Abe, tax forms, red tape banner, briefcase, star, hot dog, fake news, flip-flop.
+2. Tripo: Docs/ArtPrompts.md has every prompt, size and file name; start with batch 1 there.
 3. ElevenLabs: design 7 voices, put IDs in Tools/Voice/voices.json, run build-voice.py (100 lines ready).
