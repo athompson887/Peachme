@@ -1,0 +1,101 @@
+speaker,key,variant,text
+commentator,welcome_de,1,"Welcome to Delaware, the First State. First state, first peach. Run!"
+commentator,welcome_pa,1,"Pennsylvania, the Keystone State. Keep that stone between you and the peach."
+commentator,welcome_nj,1,"New Jersey, the Garden State. Fruit grows fast around here."
+commentator,welcome_ga,1,Georgia. The Peach State. Oh no. It's got friends here.
+commentator,welcome_ct,1,"Connecticut, the Constitution State. Article Two says: keep running."
+commentator,welcome_ma,1,"Massachusetts. The Bay State. No tea parties, there's a peach behind you."
+commentator,welcome_md,1,"Maryland, the Old Line State. Hold the line!"
+commentator,welcome_sc,1,"South Carolina, the Palmetto State. Mind the swamp."
+commentator,welcome_nh,1,New Hampshire. Live free or get squished.
+commentator,welcome_va,1,"Virginia, the Old Dominion. Lots of presidents were born here. Most of them could run."
+commentator,welcome_ny,1,"New York, the Empire State. The peach has heard of you."
+commentator,welcome_nc,1,"North Carolina, the Tar Heel State. Sticky heels are not ideal."
+commentator,welcome_ri,1,"Rhode Island, the Ocean State. Small state. Short sprint. Go!"
+commentator,welcome_vt,1,"Vermont, the Green Mountain State. Maple syrup won't slow it down."
+commentator,welcome_ky,1,"Kentucky, the Bluegrass State. Run like it's derby day."
+commentator,welcome_tn,1,"Tennessee, the Volunteer State. Nobody volunteered to be squished."
+commentator,welcome_oh,1,"Ohio, the Buckeye State. Seven presidents came from Ohio. Be the one that gets out."
+commentator,welcome_la,1,"Louisiana, the Pelican State. Peach cobbler is a regional dish. Be warned."
+commentator,welcome_in,1,"Indiana, the Hoosier State. Hoosier favourite fruit? Not this one."
+commentator,welcome_ms,1,"Mississippi, the Magnolia State. Smell the flowers later."
+commentator,welcome_il,1,"Illinois, the Land of Lincoln. Abe would want you to keep going."
+commentator,welcome_al,1,"Alabama, the Yellowhammer State. Hammer that pace."
+commentator,welcome_me,1,"Maine, the Pine Tree State. Lots of trees. One peach."
+commentator,welcome_mo,1,"Missouri, the Show-Me State. Show me some speed!"
+commentator,welcome_ar,1,"Arkansas, the Natural State. Running from fruit is perfectly natural."
+commentator,welcome_mi,1,"Michigan, the Great Lakes State. Do not stop for a swim."
+commentator,welcome_fl,1,"Florida, the Sunshine State. The peach is ripening in this heat."
+commentator,welcome_tx,1,"Texas, the Lone Star State. Everything's bigger here. Including the peach."
+commentator,welcome_ia,1,"Iowa, the Hawkeye State. First caucus, first squish? Not today."
+commentator,welcome_wi,1,"Wisconsin, the Badger State. That peach won't stop badgering you."
+commentator,welcome_ca,1,"California, the Golden State. Halfway, ish. Keep it golden."
+commentator,welcome_mn,1,"Minnesota, the North Star State. Follow the star. Away from the peach."
+commentator,welcome_or,1,"Oregon, the Beaver State. Busy busy busy."
+commentator,welcome_ks,1,"Kansas, the Sunflower State. Flat, fast and fruity."
+commentator,welcome_wv,1,"West Virginia, the Mountain State. Uphill both ways."
+commentator,welcome_nv,1,"Nevada, the Silver State. Want to bet on the peach? Neither do we."
+commentator,welcome_ne,1,"Nebraska, the Cornhusker State. Shuck and run."
+commentator,welcome_co,1,"Colorado, the Centennial State. Thin air, thick peach."
+commentator,welcome_nd,1,"North Dakota, the Peace Garden State. No peace for you."
+commentator,welcome_sd,1,"South Dakota. Mount Rushmore. Some familiar faces up there, cheering you on."
+commentator,welcome_mt,1,"Montana, the Treasure State. Your treasure is not being squished."
+commentator,welcome_wa,1,"Washington State, the Evergreen State. Wrong Washington. Keep going."
+commentator,welcome_id,1,"Idaho, the Gem State. You're a gem. Run like one."
+commentator,welcome_wy,1,"Wyoming, the Equality State. The peach treats everyone equally. Badly."
+commentator,welcome_ut,1,"Utah, the Beehive State. Be busy. Be quick."
+commentator,welcome_ok,1,"Oklahoma, the Sooner State. Sooner you run, the better."
+commentator,welcome_nm,1,"New Mexico, the Land of Enchantment. The peach is not enchanted."
+commentator,welcome_az,1,"Arizona, the Grand Canyon State. Do not fall in. Do not stop."
+commentator,welcome_ak,1,"Alaska, the Last Frontier. How did a peach get up here?"
+commentator,welcome_hi,1,"Hawaii. Aloha! Also, goodbye, if you slow down."
+commentator,welcome_dc,1,Washington D C. The finish line. Everybody's watching. Run!
+commentator,run_start,1,"Ladies and gentlemen, the race for the capital begins!"
+commentator,run_start,2,And they're off! Fifty states. One peach. No recounts.
+commentator,peach_wakes,1,Uh oh. The peach is awake.
+commentator,peach_wakes,2,The peach has entered the chat.
+commentator,peach_close,1,It's right behind you!
+commentator,peach_close,2,Fuzz detected! Move it!
+commentator,peach_close,3,The peach is gaining in the polls!
+commentator,caught,1,Squished! That's going on the record.
+commentator,caught,2,"Impeached! Well, partially."
+commentator,fake_news,1,Fake news! That's going to cost you.
+commentator,fake_news,2,Don't touch the fake news!
+commentator,flip_flop,1,A flip-flop! The voters noticed.
+commentator,flip_flop,2,Flip-flopping slows you down.
+commentator,chapter,1,New chapter. New life. Same peach.
+commentator,chapter,2,Halfway through the term. Here's an extra life.
+commentator,game_over,1,Impeached! Back to the last checkpoint.
+commentator,game_over,2,The peach wins this round.
+commentator,won,1,You made it to Washington! The peach is furious!
+commentator,won,2,Victory! Four more years of running!
+georgie,stumble,1,I cannot tell a lie. That hurt.
+georgie,escaped,1,"Onward, to the next state!"
+georgie,hot_dog,1,A fine colonial snack.
+georgie,state_cleared,1,"Another state, united."
+abe,stumble,1,Four score and ouch.
+abe,escaped,1,"A house divided cannot stand. A peach divided, even less."
+abe,hot_dog,1,Splendid sausage.
+abe,state_cleared,1,Malice toward none. Speed toward the finish.
+teddy,stumble,1,Bully! I meant to do that!
+teddy,escaped,1,Speak softly and run very fast!
+teddy,hot_dog,1,Rough Riders love a hot dog!
+teddy,state_cleared,1,Charge on!
+teddy,special,1,CHARGE!
+teddy,special,2,"Rough Riders, forward!"
+donny,stumble,1,Nobody stumbles better than me. Believe me.
+donny,escaped,1,Tremendous running. The best running.
+donny,hot_dog,1,Great hot dog. Very great.
+donny,state_cleared,1,We're winning so much.
+bill,stumble,1,I did not trip on that obstacle.
+bill,escaped,1,Don't stop thinking about tomorrow!
+bill,hot_dog,1,Mm. That's a good hot dog.
+bill,state_cleared,1,I feel your pace.
+bill,special,1,"Hit it, saxophone!"
+bill,special,2,"Smooth jazz, peach."
+dick,stumble,1,I am not a klutz!
+dick,escaped,1,Let me make one thing perfectly clear: I'm ahead.
+dick,hot_dog,1,Eighteen and a half minutes of hot dog.
+dick,state_cleared,1,Nothing to see here.
+dick,special,1,Erase that tape!
+dick,special,2,What peach? There's no record of any peach.

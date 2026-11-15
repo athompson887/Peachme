@@ -1,0 +1,17 @@
+{
+    "name": "Game",
+    "rootNamespace": "PeachMe.Game",
+    "references": [
+        "SimCore",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

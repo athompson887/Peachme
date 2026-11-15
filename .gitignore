@@ -35,8 +35,12 @@ sysinfo.txt
 __pycache__/
 *.pyc
 
-# Generated audio cache (ElevenLabs raw downloads; keep the imported clips)
-/tools/audio_cache/
+# Headless test build output
+/Tools/SimCoreTests/bin/
+/Tools/SimCoreTests/obj/
+
+# Voice tooling (Tools/Voice/recipes/ IS committed - it stops needless rebuilds)
+/Tools/Voice/.venv/
 
 # macOS
 .DS_Store

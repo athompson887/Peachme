@@ -1,6 +1,6 @@
 // PeachMe SimCore - pure C#, no UnityEngine references allowed in this folder.
 // Fixed-step, deterministic runner sim. Dynamics mirror run_stage() in
-// tools/tune_peach.py - change Python first, then this file.
+// Tools/tune_peach.py - change Python first, then this file.
 //
 // Unity contract:
 //   - Call Step(input) exactly once per fixed tick (Config.FixedDt).

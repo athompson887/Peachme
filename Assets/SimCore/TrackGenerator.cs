@@ -1,5 +1,5 @@
 // PeachMe SimCore - pure C#, no UnityEngine references allowed in this folder.
-// Distribution mirrors gen_stage() in tools/tune_peach.py.
+// Distribution mirrors gen_stage() in Tools/tune_peach.py.
 
 using System;
 using System.Collections.Generic;

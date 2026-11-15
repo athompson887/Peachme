@@ -1,5 +1,5 @@
 // PeachMe SimCore - pure C#, no UnityEngine references allowed in this folder.
-// Roster mirrors HEROES in tools/tune_peach.py.
+// Roster mirrors HEROES in Tools/tune_peach.py.
 
 using System.Collections.Generic;
 

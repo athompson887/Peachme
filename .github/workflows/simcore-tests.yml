@@ -1,0 +1,28 @@
+# The SimCore suite on every push and pull request.
+#
+# SimCore is pure C# with no UnityEngine, so it builds and tests on plain .NET
+# with no Unity licence - the same command you run locally (CLAUDE.md).
+name: SimCore tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  simcore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Test
+        run: dotnet test Tools/SimCoreTests/SimCoreTests.csproj --logger "console;verbosity=minimal"
+
+      # The tuning harness must still run - it is the source of truth for SimConfig.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Tuning harness runs
+        run: python3 Tools/tune_peach.py --runs 4

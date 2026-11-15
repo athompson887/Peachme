@@ -1,5 +1,5 @@
 // PeachMe SimCore - pure C#, no UnityEngine references allowed in this folder.
-// Values mirror tools/tune_peach.py CFG. Python is the source of truth:
+// Values mirror Tools/tune_peach.py CFG. Python is the source of truth:
 // tune there first, then copy the numbers here.
 
 namespace PeachMe.SimCore
